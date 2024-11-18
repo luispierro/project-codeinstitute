@@ -9,5 +9,12 @@
         <title>Survey Data analysis Today!</title>
     </head>
     <body>
+        <h1>Survey Insights Dashboard</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+                <label for="file">Upload your survey data (CSV):</label><br>
+                <input type="file" name="file" accept=".csv" required>
+                <button type="submit">Upload & Analyze</button>
+            </form>
+        
     </body>
 </html>
