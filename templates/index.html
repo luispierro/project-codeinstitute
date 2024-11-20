@@ -17,9 +17,15 @@
         </form>
         <div class="insights">
             <h2>Generated Insights:</h2>
-                <ul>
-                        <li class="insight">{{ insight }}</li>
-                </ul>
+            {% if insights %}
+            <ul>
+                {% for insight in insights %}
+                    <li class="insight">{{ insight }}</li>
+                {% endfor %}
+            </ul>
+            {% else %}
+                <p>No insights available. Please upload a dataset.</p>
+            {% endif %}
         </div>
     </body>
 </html>

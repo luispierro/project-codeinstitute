@@ -9,6 +9,7 @@ def home():
     return render_template("index.html")
 @app.route("/upload", methods=["POST"])
 def upload_file():
+    global insights
     file = request.files.get("file")
     if file:
         # Save the uploaded file temporarily
@@ -18,10 +19,10 @@ def upload_file():
         # Process the file
         df = pd.read_csv(filepath)
         insights = analyze_data(df)
+        return render_template("index.html", insights=insights)
     else:
         # Return an error message if no file was uploaded
         return "No file uploaded", 400
-    return redirect("/")
 def analyze_data(df):
     """Generate basic insights from survey data."""
     insights = []
