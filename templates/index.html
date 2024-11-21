@@ -23,9 +23,12 @@
                     <li class="insight">{{ insight }}</li>
                 {% endfor %}
             </ul>
+            <h3>Correlation Heatmap:</h3>
+            <img src="../static/correlation_matrix.png" alt="Correlation Heatmap">
             {% else %}
                 <p>No insights available. Please upload a dataset.</p>
             {% endif %}
+            
         </div>
     </body>
 </html>
