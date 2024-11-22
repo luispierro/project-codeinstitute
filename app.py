@@ -22,30 +22,39 @@ def upload_file():
         filepath = os.path.join("uploads", file.filename)
         os.makedirs("uploads", exist_ok=True)
         file.save(filepath)
+
         # Process the file
         df = pd.read_csv(filepath)
         insights = analyze_data(df)
-        return render_template("index.html", insights=insights)
+        # Return only the updated insights section
+        return render_template("insights.html", insights=insights, heatmap_path=heatmap_path)
     else:
         # Return an error message if no file was uploaded
         return "No file uploaded", 400
 def analyze_data(df):
     """Generate basic insights from survey data."""
     insights = []
+
     # Total number of responses
     insights.append(f"Total Responses: {len(df)}")
+
     # If there are any numeric columns, calculate averages
     numeric_columns = df.select_dtypes(include=["number"]).columns
+
     for col in numeric_columns:
         avg = df[col].mean()
         insights.append(f"Average {col}: {avg:.2f}")
+
     # If there are categorical columns, find the most common response
     categorical_columns = df.select_dtypes(include=["object"]).columns
+
     for col in categorical_columns:
         most_common = df[col].mode()[0]
         insights.append(f"Most common response for '{col}': {most_common}")
+
     # Generate the correlation heatmap
         generate_correlation_heatmap(df, heatmap_path)
+
     return insights
 def generate_correlation_heatmap(df, output_path="static/correlation_matrix.png"):
     # Select only numeric columns

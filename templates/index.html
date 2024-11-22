@@ -7,10 +7,11 @@
         <meta name="keywords" content="survey, insight, data, python, analysis">
         <meta name="author" content="Luis Pierro">
         <title>Survey Data analysis Today!</title>
+        <link rel="stylesheet" href="/static/style/style.css">
     </head>
     <body>
         <h1>Survey Insights Dashboard</h1>
-        <form action="/upload" method="POST" enctype="multipart/form-data">
+        <form id="upload-form" enctype="multipart/form-data">
                 <label for="file">Upload your survey data (CSV):</label><br>
                 <input type="file" name="file" accept=".csv" required>
                 <button type="submit">Upload & Analyze</button>
@@ -18,17 +19,23 @@
         <div class="insights">
             <h2>Generated Insights:</h2>
             {% if insights %}
-            <ul>
-                {% for insight in insights %}
-                    <li class="insight">{{ insight }}</li>
-                {% endfor %}
-            </ul>
-            <h3>Correlation Heatmap:</h3>
-            <img src="../static/correlation_matrix.png" alt="Correlation Heatmap">
+                <ul>
+                    {% for insight in insights %}
+                        <li class="insight">{{ insight }}</li>
+                    {% endfor %}
+                </ul>
+                {% if heatmap_path %}
+                    <h3>Correlation Heatmap:</h3>
+                    <img src="{{ heatmap_path }}" alt="Correlation Heatmap">
+                {% endif %}
             {% else %}
                 <p>No insights available. Please upload a dataset.</p>
             {% endif %}
-            
         </div>
+        <div id="spinner" style="display: none;">
+            <p>Processing your data... Please wait.</p>
+            <div class="loader"></div>
+        </div>
+        <script src="/static/script/script.js"></script>
     </body>
 </html>
