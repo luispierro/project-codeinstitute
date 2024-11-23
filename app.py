@@ -18,6 +18,10 @@ def upload_file():
     global heatmap_path
     file = request.files.get("file")
     if file:
+        # Check the file extension
+        if not file.filename.endswith(".csv"):
+            return "Invalid file type. Please upload a CSV file.", 400
+
         # Save the uploaded file temporarily
         filepath = os.path.join("uploads", file.filename)
         os.makedirs("uploads", exist_ok=True)

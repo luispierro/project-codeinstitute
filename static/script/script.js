@@ -3,6 +3,14 @@ document.getElementById("upload-form").addEventListener("submit", function (even
     submitCSV.call(this, event); // Pass the event explicitly and bind 'this' to the form
 });
 
+document.getElementById("file-input").addEventListener("change", function () {
+    const file = this.files[0];
+    if (file && file.type !== "text/csv" && !file.name.endsWith(".csv")) {
+        alert("Please upload a valid CSV file.");
+        this.value = ""; // Clear the input
+    }
+});
+
 function submitCSV(event){
     event.preventDefault(); // Prevent the default form submission
 
