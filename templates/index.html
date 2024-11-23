@@ -38,8 +38,10 @@
             <section>
                 <form id="upload-form" enctype="multipart/form-data">
                         <label for="file">Upload your survey data (CSV):</label><br>
-                        <input type="file" name="file" accept=".csv" required>
-                        <button type="submit">Upload & Analyze</button>
+                        <div class="input-group">
+                        <input type="file" class="form-control" name="file" accept=".csv" aria-label="Upload File" required>
+                        <button class="btn btn-outline-secondary" type="submit">Upload & Analyze</button>
+                        </div>
                 </form>
             </section>
             <section class="insights">
