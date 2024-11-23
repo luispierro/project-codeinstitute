@@ -6,8 +6,82 @@
     height: 50px;
     animation: spin 1s linear infinite;
 }
-
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+nav{
+    text-align: center;
+    padding: 5px 0px;
+}
+#home-button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+#home-button:hover {
+    background-color: #CED4DA; 
+    transform: translateY(-3px); 
+}
+#home-button:active {
+    background-color: #ADB5BD; 
+    transform: translateY(1px); 
+}
+#home-button:focus {
+    outline: none;
+    box-shadow: 2px 2px 5px #6C757D; /* focus outline */
+}
+#about-button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+#about-button:hover {
+    background-color: #CED4DA;
+    transform: translateY(-3px); /* Slight lift effect */
+}
+#about-button:active {
+    background-color: #ADB5BD;
+    transform: translateY(1px); /* Slight press effect */
+}
+#about-button:focus {
+    outline: none;
+    box-shadow: 2px 2px 5px #6C757D; /* focus outline */
+}
+#how-button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+#how-button:hover {
+    background-color: #CED4DA;
+    transform: translateY(-3px); /* Slight lift effect */
+}
+#how-button:active {
+    background-color: #ADB5BD;
+    transform: translateY(1px); /* Slight press effect */
+}
+#how-button:focus {
+    outline: none;
+    box-shadow: 2px 2px 5px #6C757D; /* focus outline */
+}
+footer{
+    background-color: #4e4e4e;
+    position: fixed;
+    padding: 10px 0px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: clamp(1rem, 1vw, 3rem);
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  footer p{ 
+    display: inline;
+    font-size: 10px;
+  }
+  .container{
+    padding-bottom: 5rem; /* Space available between last element and footer */
+  }
