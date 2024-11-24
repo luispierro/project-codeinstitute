@@ -1,12 +1,18 @@
-<h2>Generated Insights:</h2>
-{% if insights %}
-<ul>
-    {% for insight in insights %}
-        <li class="insight">{{ insight }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
-{% if heatmap_path %}
-    <h3>Correlation Heatmap:</h3>
-    <img src="{{ heatmap_path }}" alt="Correlation Heatmap">
-{% endif %}
+<div class="col-12 col-lg-4">
+    <h2>Generated Insights:</h2>
+    {% if insights %}
+    <ul>
+        {% for insight in insights %}
+            <li class="insight">{{ insight }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+<aside>
+    <div class="col-12 col-lg-8 history-results">
+    {% if heatmap_path %}
+        <h3>Correlation Heatmap:</h3>
+        <img src="{{ heatmap_path }}" class="img-fluid" alt="Correlation Heatmap">
+    {% endif %}
+    </div>
+</aside>
