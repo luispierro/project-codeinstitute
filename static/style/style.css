@@ -10,58 +10,30 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-nav{
-    text-align: center;
-    padding: 5px 0px;
+/* Ensure the brand is fully aligned to the left */
+.navbar-brand {
+    margin-left: 0;
+    padding-left: 0.5rem; /* Optional: Add slight padding to avoid touching the screen edge */
 }
-#home-button {
-    padding-top: 5px;
-    padding-bottom: 5px;
+
+/* Ensure the toggler is fully aligned to the left */
+.navbar-toggler {
+    margin-left: 0;
+    padding-left: 0.5rem; /* Optional: Add slight padding for spacing */
+}
+#nav-button {
+    padding: 5px;
     cursor: pointer;
 }
-#home-button:hover {
-    background-color: #CED4DA; 
-    transform: translateY(-3px); 
-}
-#home-button:active {
-    background-color: #ADB5BD; 
-    transform: translateY(1px); 
-}
-#home-button:focus {
-    outline: none;
-    box-shadow: 2px 2px 5px #6C757D; /* focus outline */
-}
-#about-button {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    cursor: pointer;
-}
-#about-button:hover {
+#nav-button:hover {
     background-color: #CED4DA;
     transform: translateY(-3px); /* Slight lift effect */
 }
-#about-button:active {
+#nav-button:active {
     background-color: #ADB5BD;
     transform: translateY(1px); /* Slight press effect */
 }
-#about-button:focus {
-    outline: none;
-    box-shadow: 2px 2px 5px #6C757D; /* focus outline */
-}
-#how-button {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    cursor: pointer;
-}
-#how-button:hover {
-    background-color: #CED4DA;
-    transform: translateY(-3px); /* Slight lift effect */
-}
-#how-button:active {
-    background-color: #ADB5BD;
-    transform: translateY(1px); /* Slight press effect */
-}
-#how-button:focus {
+#nav-button:focus {
     outline: none;
     box-shadow: 2px 2px 5px #6C757D; /* focus outline */
 }
