@@ -57,12 +57,13 @@
                         <img src="{{ heatmap_path }}" alt="Correlation Heatmap">
                     {% endif %}
                 {% else %}-->
-                    <p>No insights available. Please upload a dataset.</p>
+                <div class="col-auto pt-3"></div>
+                    <br><p>No insights available. Please upload a dataset.</p>
                 <!--{% endif %}-->
             </section>
-            <section id="spinner" style="display: none;">
+            <section class="col-auto pt-3" id="spinner" style="display: none;">
                 <p>Processing your data... Please wait.</p>
-                <div class="loader"></div>
+                <div class="spinner-border" style="width: 3rem; height: 3rem;"></div>
             </section>
         </main>
         <footer>
