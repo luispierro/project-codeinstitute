@@ -1,4 +1,4 @@
-<div class="col-12 col-lg-4">
+<div class="col-4 col-lg-4">
     <h2>Generated Insights:</h2>
     {% if insights %}
     <ul>
@@ -8,11 +8,9 @@
     </ul>
     {% endif %}
 </div>
-<aside>
-    <div class="col-12 col-lg-8 history-results">
+    <div class="col-6 col-lg-6">
     {% if heatmap_path %}
         <h3>Correlation Heatmap:</h3>
         <img src="{{ heatmap_path }}" class="img-fluid" alt="Correlation Heatmap">
     {% endif %}
     </div>
-</aside>
