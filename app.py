@@ -75,12 +75,9 @@ def generate_correlation_heatmap(df, output_path="static/correlation_matrix.png"
     correlation_matrix = numeric_df.corr()
 
     # Create the heatmap
-    plt.figure(figsize=(8, 6), dpi=100)
-    heatmap = sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", annot_kws={"size": 7}, cbar_kws={"shrink": 0.8})
+    plt.figure(figsize=(10, 8))
+    sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", annot_kws={"size": 8})
 
-    # Adjust x and y label formatting
-    heatmap.set_xticklabels(heatmap.get_xticklabels(), fontsize=5)
-    heatmap.set_yticklabels(heatmap.get_yticklabels(), fontsize=5)
 
     # Save the heatmap as a static image
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
