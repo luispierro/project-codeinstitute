@@ -10,16 +10,8 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-/* Ensure the brand is fully aligned to the left */
-.navbar-brand {
-    margin-left: 0;
-    padding-left: 0.5rem; /* Optional: Add slight padding to avoid touching the screen edge */
-}
-
-/* Ensure the toggler is fully aligned to the left */
-.navbar-toggler {
-    margin-left: 0;
-    padding-left: 0.5rem; /* Optional: Add slight padding for spacing */
+.nav-item{
+    text-align: center;
 }
 #nav-button {
     padding: 5px;
@@ -50,14 +42,14 @@ footer{
     right: 0;
     left: 0;
   }
-  footer p{ 
+footer p{ 
     display: inline;
     font-size: 10px;
-  }
-  .container{
+}
+.container{
     padding-bottom: 5rem; /* Space available between last element and footer */
-  }
-  a {
+}
+a {
     text-decoration: none; /* Remove underline */
     color: inherit;
-  }
+}
