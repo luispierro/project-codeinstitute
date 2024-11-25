@@ -1,6 +1,11 @@
-<div class="col-4 col-lg-4">
+<div class="col-12 col-md-6 col-lg-6 pt-3">
     <h2>Generated Insights:</h2>
     {% if insights %}
+    <br>
+    <a href="/download">
+        <button class="btn btn-outline-primary">Download Insights</button>
+    </a>
+    <br><br>
     <ul>
         {% for insight in insights %}
             <li class="insight">{{ insight }}</li>
@@ -8,9 +13,9 @@
     </ul>
     {% endif %}
 </div>
-    <div class="col-6 col-lg-6">
+<div class="col-12 col-lg-6">
     {% if heatmap_path %}
         <h3>Correlation Heatmap:</h3>
         <img src="{{ heatmap_path }}" class="img-fluid" alt="Correlation Heatmap">
     {% endif %}
-    </div>
+</div>

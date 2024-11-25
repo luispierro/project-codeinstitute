@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, send_file
+from fpdf import FPDF
 import pandas as pd
 import os
 import seaborn as sns
@@ -82,6 +83,49 @@ def generate_correlation_heatmap(df, output_path="static/correlation_matrix.png"
     # Save the heatmap as a static image
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     plt.savefig(output_path)
-    plt.close()  # Close the figure to free memory
+    plt.close() 
+
+@app.route("/download")
+def download_insights():
+    """Export the insights and the correlation heatmap to a PDF file."""
+    pdf_filepath = os.path.join("downloads", "report.pdf")
+    os.makedirs("downloads", exist_ok=True)
+
+    # Initialize the PDF
+    pdf = FPDF()
+    pdf.set_auto_page_break(auto=True, margin=15)
+    pdf.add_page()
+    pdf.set_font("Arial", size=12)
+
+    # Add a title to the PDF
+    pdf.set_font("Arial", style="B", size=16)
+    pdf.cell(0, 10, "Insights and Correlation Heatmap", ln=True, align="C")
+    pdf.ln(10)
+
+    # Write the insights to the PDF
+    pdf.set_font("Arial", size=12)
+    pdf.cell(0, 10, "Insights:", ln=True)
+    pdf.ln(5)
+    for insight in insights:
+        pdf.multi_cell(0, 10, insight)
+        pdf.ln(2)
+    
+    # Add the correlation heatmap to the PDF
+    heatmap_path = os.path.join("static", "correlation_matrix.png") 
+    if os.path.exists(heatmap_path):
+        pdf.set_font("Arial", style="B", size=14)
+        pdf.cell(0, 10, "Correlation Heatmap:", ln=True)
+        pdf.ln(10)
+        pdf.image(heatmap_path, x=10, y=None, w=190) 
+    else:
+        pdf.ln(10)
+        pdf.cell(0, 10, "Correlation heatmap image not found.", ln=True)
+    
+    # Save the PDF
+    pdf.output(pdf_filepath)
+    
+    # Return the PDF as a downloadable file
+    return send_file(pdf_filepath, as_attachment=True)
+
 if __name__ == "__main__":
     app.run(debug=True)

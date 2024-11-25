@@ -31,7 +31,7 @@ function submitCSV(event){
         if (!response.ok) {
             throw new Error("Error processing data");
         }
-        return response.text(); // Assuming the server returns updated HTML
+        return response.text();
     })
     .then(data => {
         // Replace the insights section with the server response

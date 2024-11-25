@@ -1,0 +1,21 @@
+Total Responses: 85907
+Average Item_price: 5660.77
+Average connected_handling_time: 462.40
+Average CSAT Score: 4.24
+Most common response for 'Unique id': 0000978d-8599-4e17-8cf6-28e9faeba4c9
+Most common response for 'channel_name': Inbound
+Most common response for 'category': Returns
+Most common response for 'Sub-category': Reverse Pickup Enquiry
+Most common response for 'Customer Remarks': Good 
+Most common response for 'Order_id': 0000a850-ca65-4eb1-ace1-9e34d5d1637a
+Most common response for 'order_date_time': 09/08/2023 11:55
+Most common response for 'Issue_reported at': 13/08/2023 10:40
+Most common response for 'issue_responded': 28/08/2023 00:00
+Most common response for 'Survey_response_Date': 28-Aug-23
+Most common response for 'Customer_City': HYDERABAD
+Most common response for 'Product_category': Electronics
+Most common response for 'Agent_name': Wendy Taylor
+Most common response for 'Supervisor': Carter Park
+Most common response for 'Manager': John Smith
+Most common response for 'Tenure Bucket': >90
+Most common response for 'Agent Shift': Morning
