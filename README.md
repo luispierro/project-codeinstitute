@@ -1,131 +1,112 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Fun Games Today
 
-Welcome USER_NAME,
+Fun Games Today is a playful and quirky website where players dive into the ultimate showdown of Rock, Paper, Scissors, Lizard, Spock! This isn’t your average game of chance; each match is a best-of-three series, adding a strategic twist to the classic game. Points are earned by winning rounds (+1), lost for defeats (-1), and a tie leaves you just as you were. Rack up the most points across three rounds to claim victory, or risk watching your score slip away. With each click, Fun Games Today delivers fast, addictive fun for casual players and serious strategists alike!
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Design
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+### Wireframes
 
-## Gitpod Reminders
+#### Desktop
+![desktop](static/assets/wireframe-desktop.jpg)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+#### Smartphones
+!![smartphone](static/assets/wireframe-smartphone.jpg)
 
-`python3 -m http.server`
+### Screens
 
-A blue button should appear to click: _Make Public_,
+Our Website on Tablets
+![home page-tablet](assets/game-tablet.png)
 
-Another blue button should appear to click: _Open Browser_.
+Our Website on Mobiles
+![home page-Mobile](assets/game-smartphone.png)
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+Our Website on Desktops
+![home page-desktop](assets/game-desktop.png)
 
-A blue button should appear to click: _Make Public_,
+## Features
 
-Another blue button should appear to click: _Open Browser_.
+- __Game play Options__
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- Full responsive, the players can choose their play by a easy click/tap on the option. The display is responsive for all devices and has some cool design for a fun time.
 
-To log into the Heroku toolbelt CLI:
+- __Game Help__
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- This modern overlay provides a clear, concise description of the game rules, designed for easy understanding at a glance. Players can access it anytime during gameplay without disrupting their experience or needing to leave the page. The overlay blends seamlessly with the interface, ensuring that essential information is always just a click away, helping players stay focused and informed as they play.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+![game-help](assets/game-rules.png)
 
-### Connecting your Mongo database
+__Cards Description__
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+- The website explanes the 2 buttons on top, it also follows the mouse (ONLY AVAILABLE FOR DESKTOPS):
 
-------
+![button-description](assets/descritives%20of%20buttons.png)
 
-## Release History
+__Game and Match Result__
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- With a fun and modern design, the game indicates the match winner. It also displays the option to play again and continue the Fun.
+- It also keeps the history of matches results so the players can keep track on their performance.
 
-**June 18, 2024,** Add Mongo back into template
+![game-result](assets/end-game.png)
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+### Features Left to Implement
 
-**May 28 2024:** Fix Mongo and Links installs
+- User Login
+  - With the new topics of the course, It will be possible to store credential information to make user login possible.
+- Store player game information
+  - With a bit more time to explore cookies or a database connections, would be possible to store player infos longer than a session.
+- Play Online with friends
+  - Would requisite a server wich both players could play together.
 
-**April 26 2024:** Update node version to 16
+## Testing
 
-**September 20 2023:** Update Python version to 3.9.17.
+The website was developed and thought for three major screen sizes: Phones -max 599px; Tablet -min 600px; Laptops and Desktops- min 992px.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+It was tested using the inspect feature of the chrome browser and my actual phone and tablet.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Validator Testing 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- JavaScript Linter
+  - No errors passing through the validator: [Jshint linter](assets/jshint.png)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- HTML
+  - No errors passing through the validator: [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fluispierro.github.io%2Fproject2-codeinstitute%2F)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- CSS
+  - No erros passing through the validator. [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fluispierro.github.io%2Fproject2-codeinstitute%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=pt-BR)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- Accessibility
+  - No erros passing through the validator. Only alarms for device dependencies, especially for the hover events. [(Wave) validator](https://wave.webaim.org/report#/https://luispierro.github.io/project2-codeinstitute/)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- Lighthouse
+  - Good score obtained while passing through lighthouse inspection on browser:
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+  ![Lighthouse](assets/lighthouse.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Unfixed Bugs
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+No major bugs left to be fixed.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Deployment 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the GitHub repository, navigate to the Settings tab 
+  - From the source section drop-down menu, select the Master Branch
+  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+The live link can be found here - https://luispierro.github.io/project2-codeinstitute/
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Credits
 
-------
+### Style Libraries
 
-## FAQ about the uptime script
+- The functional grids from Bootstrap were used to leverage market trends and improve the website's responsiveness. [BootStrap](https://getbootstrap.com/docs/5.3/layout/grid/)
 
-**Why have you added this script?**
+### Content 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- The text for the about us and game rules were taken Using AI, Gemini and Chat GPT. They have suggested the story of the company of game design and described the game rules and flow.
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Media
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+- The icons in the footer were taken from [Flat Icon](https://www.flaticon.com/br/icones-gratis/redes-sociais)
+- The favicons in the title of the webpage and for the options were taken from [FavIcon.io](https://favicon.io/)
