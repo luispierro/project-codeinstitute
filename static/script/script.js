@@ -1,4 +1,9 @@
 /* jshint esversion: 6 */
+
+const overlayBackground = document.getElementById('overlay-background');
+const aboutUsMessage = document.getElementById('aboutus-message');
+const howWorksMessage = document.getElementById('howworks-message');
+
 document.getElementById("upload-form").addEventListener("submit", function (event) {
     submitCSV.call(this, event); // Pass the event explicitly and bind 'this' to the form
 });
@@ -48,32 +53,21 @@ function submitCSV(event){
     });
 }
 
-function aboutOpen(){
-    // function to display the about us
-    document.getElementById('aboutus-message').style.display = 'block';
-    document.getElementById('overlay-background').style.display = 'block';
-    document.getElementById('aboutus-message').scrollTop = 0;
+function navOpen(element){
+    // function to display option selected on nav
+    element.style.display = 'block';
+    overlayBackground.style.display = 'block';
+    element.scrollTop = 0;
 }
-function aboutClose(){
-    // function to close the about us
-    document.getElementById('aboutus-message').style.display = 'none';
-    document.getElementById('overlay-background').style.display = 'none';
-}
-function howOpen(){
-    // function to display the rules
-    document.getElementById('howworks-message').style.display = 'block';
-    document.getElementById('overlay-background').style.display = 'block';
-    document.getElementById('howworks-message').scrollTop = 0;
-}
-function howClose(){
-    // function to close the rules
-    document.getElementById('howworks-message').style.display = 'none';
-    document.getElementById('overlay-background').style.display = 'none';
+function navClose(element){
+    // function to close option selected on nav
+    element.style.display = 'none';
+    overlayBackground.style.display = 'none';
 }
 
 //Click listener for the about us button
-document.getElementById("about-button").addEventListener("click", function() {aboutOpen();});
-document.getElementById("close-about").addEventListener("click", function() {aboutClose();});
+document.getElementById("about-button").addEventListener("click", () => navOpen(aboutUsMessage));
+document.getElementById("close-about").addEventListener("click", () => navClose(aboutUsMessage));
 //Click listener for the how it works button
-document.getElementById("how-button").addEventListener("click", function() {howOpen();});
-document.getElementById("close-how").addEventListener("click", function() {howClose();});
+document.getElementById("how-button").addEventListener("click", () => navOpen(howWorksMessage));
+document.getElementById("close-how").addEventListener("click", () => navClose(howWorksMessage));
