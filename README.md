@@ -1,6 +1,6 @@
-# Fun Games Today
+# Survey Insights Today: Your Data, Simplified
 
-Fun Games Today is a playful and quirky website where players dive into the ultimate showdown of Rock, Paper, Scissors, Lizard, Spock! This isn’t your average game of chance; each match is a best-of-three series, adding a strategic twist to the classic game. Points are earned by winning rounds (+1), lost for defeats (-1), and a tie leaves you just as you were. Rack up the most points across three rounds to claim victory, or risk watching your score slip away. With each click, Fun Games Today delivers fast, addictive fun for casual players and serious strategists alike!
+Dive into the depths of your survey data with ease. Upload your CSV file, and let our AI do the heavy lifting. In just a few clicks, you'll unlock valuable insights and actionable recommendations. Delve into a comprehensive report, complete with clear and concise summaries, visually appealing charts and graphs, and in-depth statistical analysis. Save your customized PDF report for future reference or sharing with colleagues. Experience the future of data analysis today.
 
 ## Design
 
@@ -25,26 +25,25 @@ Our Website on Desktops
 
 ## Features
 
-- __Game play Options__
+- __Upload CSV File__
 
-- Full responsive, the players can choose their play by a easy click/tap on the option. The display is responsive for all devices and has some cool design for a fun time.
+- Full responsive, the user can upload their csv survey file trough a easy and intuitive form. The has a validation to ensure that user correctly upload a csv file.
 
-- __Game Help__
+- __Website Help__
 
-- This modern overlay provides a clear, concise description of the game rules, designed for easy understanding at a glance. Players can access it anytime during gameplay without disrupting their experience or needing to leave the page. The overlay blends seamlessly with the interface, ensuring that essential information is always just a click away, helping players stay focused and informed as they play.
+- This modern overlay provides a clear, concise description of the website functions, designed for easy understanding at a glance. Users can access it anytime during the visit without disrupting their experience or needing to leave the page. The overlay blends seamlessly with the interface, ensuring that essential information is always just a click away, helping users stay focused and informed as they explore the insights.
 
 ![game-help](assets/game-rules.png)
 
-__Cards Description__
+__Insights__
 
-- The website explanes the 2 buttons on top, it also follows the mouse (ONLY AVAILABLE FOR DESKTOPS):
+- The website prepare a set of insights and display it on a easy way on the screen:
 
 ![button-description](assets/descritives%20of%20buttons.png)
 
-__Game and Match Result__
+__Download Insights__
 
-- With a fun and modern design, the game indicates the match winner. It also displays the option to play again and continue the Fun.
-- It also keeps the history of matches results so the players can keep track on their performance.
+- The website displays a easy and intuitive button so the user can download the result insights into a PDF file.
 
 ![game-result](assets/end-game.png)
 
