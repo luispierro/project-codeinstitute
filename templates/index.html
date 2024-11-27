@@ -21,6 +21,8 @@
                     <h1>Survey Insights Today!</h1>
                 </div>
             </div>
+            <!-- Overlay background -->
+            <div id="overlay-background" style="display: none;"></div>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <hr>
                 <a class="navbar-brand" href="/">
@@ -33,10 +35,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="container-fluid">
                         <ul class="navbar-nav">
-                            <li class="nav-item" id="nav-button">
+                            <li class="nav-item nav-button" id="how-button">
                                 How it Works
                             </li>
-                            <li class="nav-item" id="nav-button">
+                            <li class="nav-item nav-button" id="about-button">
                                 About Us
                             </li>
                         </ul>
@@ -45,6 +47,38 @@
             </nav>
         </header>
         <main class="container">
+            <!-- Overlapping how it works nav item box -->
+            <section class="overlay-message" id="howworks-message">
+                <h4>How to Use Survey Insights Today</h4>
+                <ol>
+                    <li>Upload Your Data:</li>
+                    <ul>
+                        <li>Navigate to our homepage.</li>
+                        <li>Click the "Upload & Analyze" button.</li>
+                        <li>Select your survey data file in CSV format.</li>
+                    </ul>
+                    <li>AI Analysis:</li>
+                    <ul>
+                        <li>Our AI engine will automatically process your data.</li>
+                        <li>This may take a few moments, depending on the size of your dataset.</li>
+                    </ul>
+                    <li>View Insights:</li>
+                    <ul>
+                        <li>Once the analysis is complete, you'll see a detailed report, including: Key findings; Visualizations (charts, graphs); and Statistical analysis</li>
+                    </ul>
+                    <li>Download Your Report:</li>
+                    <ul>
+                        <li>Click the "Download Insights" button to save a comprehensive PDF report of your insights.</li>
+                        <li>This report can be shared with your team or clients.</li>
+                    </ul>
+                </ol>
+                <button class="btn btn-danger center-button" id="close-how">Close</button>
+            </section>
+            <!-- Overlapping about us nav item box -->
+            <section class="overlay-message" id="aboutus-message">
+                <p>Survey Insights Today is a dynamic startup revolutionizing the way businesses leverage survey data. Our innovative website empowers users to extract actionable insights from their surveys with unparalleled ease and efficiency. Powered by advanced AI algorithms, Survey Insights Today automates data analysis, generates insightful reports, and visualizes trends in a user-friendly dashboard. Whether you're a market researcher, academician, or business owner, our platform transforms complex survey data into valuable knowledge, enabling you to make data-driven decisions with confidence.</p>
+                <button class="btn btn-danger center-button" id="close-about">Close</button>
+            </section>
             <section class="row pt-3">
                 <form id="upload-form" enctype="multipart/form-data">
                         <label for="file">Upload your survey data (CSV):</label><br>

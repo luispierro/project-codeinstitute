@@ -47,3 +47,33 @@ function submitCSV(event){
         insightsContainer.style.display = "block";
     });
 }
+
+function aboutOpen(){
+    // function to display the about us
+    document.getElementById('aboutus-message').style.display = 'block';
+    document.getElementById('overlay-background').style.display = 'block';
+    document.getElementById('aboutus-message').scrollTop = 0;
+}
+function aboutClose(){
+    // function to close the about us
+    document.getElementById('aboutus-message').style.display = 'none';
+    document.getElementById('overlay-background').style.display = 'none';
+}
+function howOpen(){
+    // function to display the rules
+    document.getElementById('howworks-message').style.display = 'block';
+    document.getElementById('overlay-background').style.display = 'block';
+    document.getElementById('howworks-message').scrollTop = 0;
+}
+function howClose(){
+    // function to close the rules
+    document.getElementById('howworks-message').style.display = 'none';
+    document.getElementById('overlay-background').style.display = 'none';
+}
+
+//Click listener for the about us button
+document.getElementById("about-button").addEventListener("click", function() {aboutOpen();});
+document.getElementById("close-about").addEventListener("click", function() {aboutClose();});
+//Click listener for the how it works button
+document.getElementById("how-button").addEventListener("click", function() {howOpen();});
+document.getElementById("close-how").addEventListener("click", function() {howClose();});
