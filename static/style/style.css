@@ -86,3 +86,65 @@ a {
     display: block;
     margin: 20px auto; /* Center horizontally */
 }
+/* Tablet */
+@media (min-width: 600px) {
+    /* Overlapping about us and how it worksbox style */
+    .overlay-message {
+        position: fixed; /* Sticks to a specific position relative to the viewport */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centers the message box */
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        display: none; /* Hidden by default */
+        z-index: 1000; /* Ensures the message overlaps other content */
+        width: 40vh;
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+    #overlay-background {
+        position: fixed; /* Sticks to a specific position relative to the viewport */
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+}
+/* Desktop and laptop */
+@media (min-width: 992px) {
+    /* Overlapping about us and how it worksbox style */
+    .overlay-message {
+        position: fixed; /* Sticks to a specific position relative to the viewport */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centers the message box */
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        display: none; /* Hidden by default */
+        z-index: 1000; /* Ensures the message overlaps other content */
+        width: 70vh;
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+    #overlay-background {
+        position: fixed; /* Sticks to a specific position relative to the viewport */
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+}
