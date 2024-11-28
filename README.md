@@ -15,13 +15,13 @@ Dive into the depths of your survey data with ease. Upload your CSV file, and le
 ### Screens
 
 Our Website on Tablets
-![home page-tablet](assets/game-tablet.png)
+![home page-tablet](static/assets/tablet.png)
 
 Our Website on Mobiles
-![home page-Mobile](assets/game-smartphone.png)
+![home page-Mobile](static/assets/smartphone.png)
 
 Our Website on Desktops
-![home page-desktop](assets/game-desktop.png)
+![home page-desktop](static/assets/desktop.png)
 
 ## Features
 
@@ -33,19 +33,18 @@ Our Website on Desktops
 
 - This modern overlay provides a clear, concise description of the website functions, designed for easy understanding at a glance. Users can access it anytime during the visit without disrupting their experience or needing to leave the page. The overlay blends seamlessly with the interface, ensuring that essential information is always just a click away, helping users stay focused and informed as they explore the insights.
 
-![game-help](assets/game-rules.png)
+![game-help](static/assets/help.png)
 
 __Insights__
 
 - The website prepare a set of insights and display it on a easy way on the screen:
 
-![button-description](assets/descritives%20of%20buttons.png)
+![button-description](static/assets/insights.png)
 
 __Download Insights__
 
 - The website displays a easy and intuitive button so the user can download the result insights into a PDF file.
 
-![game-result](assets/end-game.png)
 
 ### Features Left to Implement
 
