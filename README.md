@@ -50,10 +50,8 @@ __Download Insights__
 
 - User Login
   - With the new topics of the course, It will be possible to store credential information to make user login possible.
-- Store player game information
-  - With a bit more time to explore cookies or a database connections, would be possible to store player infos longer than a session.
-- Play Online with friends
-  - Would requisite a server wich both players could play together.
+- Store previous user generated insights
+  - Would need a database or something to store it.
 
 ## Testing
 
@@ -101,10 +99,10 @@ The live link can be found here - https://luispierro.github.io/project2-codeinst
 
 ### Content 
 
-- The text for the about us and game rules were taken Using AI, Gemini and Chat GPT. They have suggested the story of the company of game design and described the game rules and flow.
+- The text for the 'About Us' and 'How it works' were taken Using AI, Gemini and Chat GPT.
 
 
 ### Media
 
 - The icons in the footer were taken from [Flat Icon](https://www.flaticon.com/br/icones-gratis/redes-sociais)
-- The favicons in the title of the webpage and for the options were taken from [FavIcon.io](https://favicon.io/)
+- The favicons in the title of the webpage and for the navegation were taken from [FavIcon.io](https://favicon.io/)
