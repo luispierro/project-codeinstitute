@@ -44,7 +44,7 @@ footer{
   }
 footer p{ 
     display: inline;
-    font-size: 10px;
+    font-size: 14px;
 }
 .container{
     padding-bottom: 5rem; /* Space available between last element and footer */

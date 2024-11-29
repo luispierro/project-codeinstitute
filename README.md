@@ -61,14 +61,17 @@ It was tested using the inspect feature of the chrome browser and my actual phon
 
 ### Validator Testing 
 
+- PEP8 Python Validator
+  - No errors passing through the validator: [PEP8 Python Validator](static/assets/PEP8.png)
+
 - JavaScript Linter
   - No errors passing through the validator: [Jshint linter](assets/jshint.png)
 
 - HTML
-  - No errors passing through the validator: [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fluispierro.github.io%2Fproject2-codeinstitute%2F)
+  - No errors passing through the validator: [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fproject3-codeinstitute-2004aef5d4d7.herokuapp.com%2F)
 
 - CSS
-  - No erros passing through the validator. [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fluispierro.github.io%2Fproject2-codeinstitute%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=pt-BR)
+  - No erros passing through the validator. [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fproject3-codeinstitute-2004aef5d4d7.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=pt-BR)
 
 - Accessibility
   - No erros passing through the validator. Only alarms for device dependencies, especially for the hover events. [(Wave) validator](https://wave.webaim.org/report#/https://luispierro.github.io/project2-codeinstitute/)
