@@ -3,6 +3,7 @@
 const overlayBackground = document.getElementById('overlay-background');
 const aboutUsMessage = document.getElementById('aboutus-message');
 const howWorksMessage = document.getElementById('howworks-message');
+const errorMessage = document.getElementById("error-message"); // New: For displaying error messages
 
 document.getElementById("upload-form").addEventListener("submit", function (event) {
     submitCSV.call(this, event); // Pass the event explicitly and bind 'this' to the form
@@ -11,7 +12,7 @@ document.getElementById("upload-form").addEventListener("submit", function (even
 document.getElementById("file-input").addEventListener("change", function () {
     const file = this.files[0];
     if (file && file.type !== "text/csv" && !file.name.endsWith(".csv")) {
-        alert("Please upload a valid CSV file.");
+        errorMessage.textContent = "Please upload a valid CSV file.";
         this.value = ""; // Clear the input
     }
 });
@@ -22,7 +23,7 @@ function submitCSV(event) {
     const formData = new FormData(this);
     const spinner = document.getElementById("spinner");
     const insightsContainer = document.querySelector(".insights");
-    const errorMessage = document.getElementById("error-message"); // New: For displaying error messages
+    
 
     // Clear previous error message
     errorMessage.textContent = "";
