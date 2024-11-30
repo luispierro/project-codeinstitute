@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, send_file
+from flask import Flask, render_template, request, redirect, send_file, jsonify
 from fpdf import FPDF
 import pandas as pd
 import os
@@ -22,16 +22,21 @@ def upload_file():
     global insights
     global heatmap_path
     file = request.files.get("file")
-    if file:
-        # Check the file extension
-        if not file.filename.endswith(".csv"):
-            return "Invalid file type. Please upload a CSV file.", 400
+    if not file:
+        # Return an error message in JSON format
+        return jsonify({"error": "No file uploaded. Please upload a valid CSV file."}), 200
 
-        # Save the uploaded file temporarily
-        filepath = os.path.join("uploads", file.filename)
-        os.makedirs("uploads", exist_ok=True)
-        file.save(filepath)
+    if not file.filename.endswith(".csv"):
+        # Return an error message in JSON format
+        return jsonify({"error": "Invalid file type. Only CSV files are accepted."}), 200
 
+
+    # Save the uploaded file temporarily
+    filepath = os.path.join("uploads", file.filename)
+    os.makedirs("uploads", exist_ok=True)
+    file.save(filepath)
+
+    try:
         # Process the file
         df = pd.read_csv(filepath)
         insights = analyze_data(df)
@@ -40,10 +45,10 @@ def upload_file():
             "insights.html",
             insights=insights,
             heatmap_path=heatmap_path
-        )
-    else:
-        # Return an error message if no file was uploaded
-        return "No file uploaded", 400
+            )
+    except Exception as e:
+        # Handle unexpected errors gracefully and return as JSON
+        return jsonify({"error": f"An error occurred while processing the file: {str(e)}"}), 500
 
 
 def analyze_data(df):

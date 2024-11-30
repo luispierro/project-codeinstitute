@@ -16,12 +16,16 @@ document.getElementById("file-input").addEventListener("change", function () {
     }
 });
 
-function submitCSV(event){
+function submitCSV(event) {
     event.preventDefault(); // Prevent the default form submission
 
     const formData = new FormData(this);
     const spinner = document.getElementById("spinner");
     const insightsContainer = document.querySelector(".insights");
+    const errorMessage = document.getElementById("error-message"); // New: For displaying error messages
+
+    // Clear previous error message
+    errorMessage.textContent = "";
 
     // Show the spinner
     spinner.style.display = "block";
@@ -33,18 +37,31 @@ function submitCSV(event){
         body: formData
     })
     .then(response => {
-        if (!response.ok) {
+        if (response.ok) {
+            const contentType = response.headers.get("Content-Type");
+            if (contentType && contentType.includes("application/json")) {
+                // If JSON is returned, it's likely an error
+                return response.json();
+            } else {
+                // If HTML is returned, process it as text (success case)
+                return response.text();
+            }
+        } else {
             throw new Error("Error processing data");
         }
-        return response.text();
     })
     .then(data => {
-        // Replace the insights section with the server response
-        insightsContainer.innerHTML = data;
+        if (typeof data === "object" && data.error) {
+            // Handle error returned as JSON
+            errorMessage.textContent = data.error; // Display the error message
+        } else {
+            // Handle success case with returned HTML
+            insightsContainer.innerHTML = data;
+        }
     })
     .catch(error => {
         console.error("Error:", error);
-        alert("There was an error processing your data.");
+        errorMessage.textContent = "There was an error processing your data.";
     })
     .finally(() => {
         // Hide the spinner
