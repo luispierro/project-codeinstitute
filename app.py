@@ -24,12 +24,15 @@ def upload_file():
     file = request.files.get("file")
     if not file:
         # Return an error message in JSON format
-        return jsonify({"error": "No file uploaded. Please upload a valid CSV file."}), 200
+        return jsonify(
+            {"error": "No file uploaded. Please upload a valid CSV file."}
+        ), 200
 
     if not file.filename.endswith(".csv"):
         # Return an error message in JSON format
-        return jsonify({"error": "Invalid file type. Only CSV files are accepted."}), 200
-
+        return jsonify(
+            {"error": "Invalid file type. Only CSV files are accepted."}
+        ), 200
 
     # Save the uploaded file temporarily
     filepath = os.path.join("uploads", file.filename)
@@ -48,7 +51,9 @@ def upload_file():
             )
     except Exception as e:
         # Handle unexpected errors gracefully and return as JSON
-        return jsonify({"error": f"An error occurred while processing the file: {str(e)}"}), 500
+        return jsonify(
+            {"error": f"An error occurred while processing the file: {str(e)}"}
+            ), 500
 
 
 def analyze_data(df):
