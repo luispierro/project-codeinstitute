@@ -55,7 +55,9 @@ __Download Insights__
 
 ## Testing
 
+Code was passed thru PEP8 linter and no problems were identified.
 The website was developed and thought for three major screen sizes: Phones -max 599px; Tablet -min 600px; Laptops and Desktops- min 992px.
+Given invalid file extensios anda long data sats..
 
 It was tested using the inspect feature of the chrome browser and my actual phone and tablet.
 
@@ -83,12 +85,15 @@ No major bugs left to be fixed.
 
 ## Deployment 
 
-- The site was deployed to GitHub pages. The steps to deploy are as follows: 
-  - In the GitHub repository, navigate to the Settings tab 
-  - From the source section drop-down menu, select the Master Branch
-  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+- The site was deployed to Heroku. The steps to deploy are as follows: 
+  - Fork the git hub directory.
+  - Create a heroku account.
+  - Make shure that you have the files requirements well forked
+  - Link the Heroku accont to the git repositore.
+  - Set up rule for deployment with push into repository
+  - Deploy the application
 
-The live link can be found here - https://luispierro.github.io/project2-codeinstitute/
+The live link can be found here - https://project3-codeinstitute-2004aef5d4d7.herokuapp.com/
 
 ## Credits
 
